@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "azure-radar"
+version = "1.0.0"
+description = "CLI tool for Azure services inventory and diagramming"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{name = "Mor Michaeli"}]
+license = "MIT"
+license-files = ["LICENSE"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "typer",
+    "pandas",
+]
+
+[project.scripts]
+azure-radar = "azure_radar.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
